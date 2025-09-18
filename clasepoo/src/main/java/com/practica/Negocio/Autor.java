@@ -17,6 +17,14 @@ public class Autor {
     private String biografia;
     private ArrayList<Libro> libros = new ArrayList<Libro>();
 
+    //* Constructor propio */
+    public Autor(int id, String nombre, String nacionalidad, String biografia){
+        this.id = id;
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.biografia = biografia;
+    }
+
     public void escribirLibro(Libro libro){
         this.libros.add(libro);
     }

@@ -1,5 +1,6 @@
 package com.practica.Negocio;
 
+import java.util.Date;
 import java.util.ArrayList;
 
 import lombok.AllArgsConstructor;
@@ -17,6 +18,14 @@ public class Libro extends Catalogo implements IPublicable {
     private GeneroLiterario genero; //* Crear enumeration, el tipo es el nombre de la Enum */
     private ArrayList<Autor> autores = new ArrayList<Autor>();
 
+    //* Constructor propio */
+    public Libro(String tituloCatalogo, Date fechaPublicacion, String isbn, String nombre, GeneroLiterario genero) {
+        super(tituloCatalogo, fechaPublicacion);
+        this.isbn = isbn;
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+    
     //* Métodos propios */
     public void agregarAutor(Autor autor){
         this.autores.add(autor);
