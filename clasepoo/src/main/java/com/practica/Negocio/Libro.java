@@ -3,19 +3,21 @@ package com.practica.Negocio;
 import java.util.Date;
 import java.util.ArrayList;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
 
 //* Extiende de la clase Catalogo e implementa la interface
 public class Libro extends Catalogo implements IPublicable {
     private String isbn;
     private String nombre;
     private GeneroLiterario genero; //* Crear enumeration, el tipo es el nombre de la Enum */
+    @ToString.Exclude
     private ArrayList<Autor> autores = new ArrayList<Autor>();
 
     //* Constructor propio */

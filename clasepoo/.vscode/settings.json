@@ -1,0 +1,47 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "C:\\Program Files\\Java\\jdk-21",
+            "default": true
+        }
+    ],
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "maven.executable.path": "C:\\Tools\\apache-maven-3.9.9\\bin\\mvn.cmd",
+    "java.cleanup.actionsOnSave": [
+        "organizeImports"
+    ],
+    "java.saveActions.organizeImports": true,
+    "java.sources.organizeImports.starThreshold": 99,
+    "java.sources.organizeImports.staticStarThreshold": 99,
+    "java.format.onType.enabled": true,
+    "java.format.insertSpaces": true,
+    "java.format.tabSize": 4,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.configuration.maven.userSettings": null,
+    "java.import.maven.enabled": true,
+    "java.maven.downloadSources": true,
+    "java.implementationsCodeLens.enabled": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.signatureHelp.enabled": true,
+    "java.contentProvider.preferred": "fernflower",
+    "java.eclipse.downloadSources": true,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "errorLens.enabled": false,
+    "errorLens.enabledDiagnosticLevels": [],
+    "errorLens.excludeBySource": [
+        "java",
+        "Java",
+        "javac",
+        "lombok"
+    ],
+    "errorLens.messageEnabled": false,
+    "errorLens.statusBarMessageEnabled": false,
+    "errorLens.gutterIconsEnabled": false,
+    "problems.decorations.enabled": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "java.configuration.maven.notCoveredPluginExecutionSeverity": "ignore"
+}

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 //* Añadir proyecto lombok para generar constructores, getters y setters -> Anotaciones
 @Data
@@ -15,6 +16,7 @@ public class Autor {
     private String nombre;
     private String nacionalidad;
     private String biografia;
+    @ToString.Exclude
     private ArrayList<Libro> libros = new ArrayList<Libro>();
 
     //* Constructor propio */
