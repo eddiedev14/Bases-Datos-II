@@ -41,7 +41,7 @@ public class Libro extends Catalogo implements IPublicable {
     //* Implementar los metodos de la clase abstracta para hacerle override
     @Override
     public String etiquetaCatalogo() {
-        return "Libro: " + this.nombre + ", pertenece al: " + super.etiquetaCatalogo();
+        return "Libro: " + this.nombre + ", pertenece al " + super.etiquetaCatalogo();
     }
 
     //* Implementar los metodos de la interface */
