@@ -2,13 +2,13 @@ package com.practica.Negocio;
 
 import java.util.Date;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
 public class Revista extends Catalogo implements IPublicable {
     private String issn;
     private String nombre;

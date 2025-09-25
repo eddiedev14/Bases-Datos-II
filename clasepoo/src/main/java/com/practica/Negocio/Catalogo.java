@@ -15,6 +15,6 @@ public abstract class Catalogo {
 
     //Métodos
     public String etiquetaCatalogo(){
-        return "Catalogo es: " + this.titulo + ", fecha de publicación: " + this.fechaPublicacion;        
+        return "catalogo " + this.titulo + ", fecha de publicación: " + this.fechaPublicacion;        
     }
 }

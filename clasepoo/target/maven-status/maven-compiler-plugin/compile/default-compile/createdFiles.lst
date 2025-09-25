@@ -1,0 +1,7 @@
+com\practica\Negocio\Autor.class
+com\practica\Main.class
+com\practica\Negocio\Catalogo.class
+com\practica\Negocio\IPublicable.class
+com\practica\Negocio\GeneroLiterario.class
+com\practica\Negocio\Libro.class
+com\practica\Negocio\Revista.class
