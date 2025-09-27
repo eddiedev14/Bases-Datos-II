@@ -1,6 +1,7 @@
 package com.apirest.backend.Controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.apirest.backend.Model.EmpleadosModel;
 import com.apirest.backend.Service.IEmpleadoService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
@@ -39,6 +42,14 @@ public class EmpleadosController {
      public ResponseEntity<EmpleadosModel> buscarEmpleadosPorId(@PathVariable ObjectId id){
         return new ResponseEntity<EmpleadosModel>(empleadoService.buscarEmpleadoPorId(id), HttpStatus.OK);
      }
-     
-     
+
+     @PutMapping("/actualizar-completo/{id}")
+     public ResponseEntity<EmpleadosModel> actualizarEmpleadoCompleto(@PathVariable ObjectId id, @RequestBody EmpleadosModel empleado){
+        return new ResponseEntity<EmpleadosModel>(empleadoService.actualizarEmpleadoCompleto(id, empleado), HttpStatus.OK);
+     }
+
+     @PatchMapping("/actualizar-parcial/{id}")
+     public ResponseEntity<EmpleadosModel> actualizarEmpleadoParcial(@PathVariable ObjectId id, @RequestBody Map<String, Object> datos){
+        return new ResponseEntity<EmpleadosModel>(empleadoService.actualizarEmpleadoParcial(id, datos), HttpStatus.OK);
+     }
 }
