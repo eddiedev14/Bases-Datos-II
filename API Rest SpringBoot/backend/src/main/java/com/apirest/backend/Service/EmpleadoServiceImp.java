@@ -79,8 +79,9 @@ public class EmpleadoServiceImp implements IEmpleadoService {
 
     @Override
     public String eliminarEmpleado(ObjectId id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminarEmpleado'");
+        EmpleadosModel empleadoExistente = empleadosRepository.findById(id).orElseThrow(() -> new RecursoNoEncontradoException("Error! No existe un empleado con el id: " + id + "o está mal escrito"));
+        empleadosRepository.deleteById(id);
+        return "El empleado con la id " + id + ", fue eliminado correctamente";
     }
     
 }
