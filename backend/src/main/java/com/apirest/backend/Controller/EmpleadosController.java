@@ -5,28 +5,27 @@ import java.util.List;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.apirest.backend.DTO.EmpleadoCreateDTO;
 import com.apirest.backend.DTO.EmpleadoEquiposDTO;
+import com.apirest.backend.DTO.EmpleadoResponseDTO;
 import com.apirest.backend.Model.EmpleadosModel;
 import com.apirest.backend.Service.IEmpleadosService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @RestController
 @RequestMapping ("/UAO/apirest/empleados") // endpoint
 public class EmpleadosController {
     @Autowired IEmpleadosService empleadosService;
     @PostMapping("/insertar")
-    public ResponseEntity<EmpleadosModel> crearEmpleado(@RequestBody EmpleadosModel empleado){
-        return new ResponseEntity<EmpleadosModel>(empleadosService.guardarEmpleado(empleado),HttpStatus.CREATED);
+    public ResponseEntity<EmpleadoResponseDTO> crearEmpleado(@RequestBody EmpleadoCreateDTO empleado){
+        return new ResponseEntity<EmpleadoResponseDTO>(empleadosService.guardarEmpleado(empleado),HttpStatus.CREATED);
     }
     
     @GetMapping("/listar")

@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.bson.types.ObjectId;
 
+import com.apirest.backend.DTO.EmpleadoCreateDTO;
 import com.apirest.backend.DTO.EmpleadoEquiposDTO;
+import com.apirest.backend.DTO.EmpleadoResponseDTO;
 import com.apirest.backend.Model.EmpleadosModel;
 
 public interface IEmpleadosService {
-    public EmpleadosModel guardarEmpleado(EmpleadosModel empleado);
+    public EmpleadoResponseDTO guardarEmpleado(EmpleadoCreateDTO empleado);
     public List<EmpleadosModel> listarEmpleados();
     public EmpleadosModel buscarEmpleadosPorId(ObjectId id);
     /* 
