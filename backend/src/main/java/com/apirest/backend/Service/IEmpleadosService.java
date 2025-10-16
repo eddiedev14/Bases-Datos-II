@@ -11,7 +11,7 @@ import com.apirest.backend.Model.EmpleadosModel;
 
 public interface IEmpleadosService {
     public EmpleadoResponseDTO guardarEmpleado(EmpleadoCreateDTO empleado);
-    public List<EmpleadosModel> listarEmpleados();
+    public List<EmpleadoResponseDTO> listarEmpleados();
     public EmpleadosModel buscarEmpleadosPorId(ObjectId id);
     /* 
     public EmpleadosModel actualizarEmpleado(ObjectId id, EmpleadosModel empleado);

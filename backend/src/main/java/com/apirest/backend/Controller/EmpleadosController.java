@@ -29,8 +29,8 @@ public class EmpleadosController {
     }
     
     @GetMapping("/listar")
-    public ResponseEntity<List<EmpleadosModel>> listarEmpleados(){
-        return new ResponseEntity<List<EmpleadosModel>>(empleadosService.listarEmpleados(),HttpStatus.OK);
+    public ResponseEntity<List<EmpleadoResponseDTO>> listarEmpleados(){
+        return new ResponseEntity<List<EmpleadoResponseDTO>>(empleadosService.listarEmpleados(),HttpStatus.OK);
     }
 
     @GetMapping("/empleadoporid/{id}")

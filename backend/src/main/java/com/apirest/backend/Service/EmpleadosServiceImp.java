@@ -31,8 +31,8 @@ public class EmpleadosServiceImp implements IEmpleadosService {
     }
 
     @Override
-    public List<EmpleadosModel> listarEmpleados() {
-        return empleadosRepository.findAll();
+    public List<EmpleadoResponseDTO> listarEmpleados() {
+        return empleadoMapper.toResponseDTOList(empleadosRepository.findAll());
     }
 
     @Override
